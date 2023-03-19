@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"  >
+    <listeners>
+        <listener class-name="Utilities.Reporting"></listener>
+    </listeners>
+    <test name="Login">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="Environment" value="production"></parameter>
+
+        <groups>
+            <run>
+
+                <include name="Smoke"></include>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="TestCases.TC01"></class>
+            <class name="TestCases.TC02"></class>
+
+
+        </classes>
+    </test>
+</suite>
